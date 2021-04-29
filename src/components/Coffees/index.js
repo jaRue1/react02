@@ -1,4 +1,5 @@
 import React from "react"
+import SingleCoffee from './SingleCoffee'
 //Functional Component
 // function Coffees(){
 //   return (
@@ -36,13 +37,8 @@ class Coffees extends React.Component {
         <ul className="allCoffees">
           {/* logs an individual coffee */}
           {/* {this.state.data.map(item => console.log(item))} */}
-          {this.state.data.map((item) => {
-            return(
-            <li key={item.id}> 
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </li>
-            )
+          {this.state.data.map(item => {
+            return <SingleCoffee key={item.id} passedItem={item}/>
           })}
         </ul>
       </>
