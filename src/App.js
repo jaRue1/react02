@@ -4,6 +4,7 @@ import "./App.css"
 import Header from "./components/Header/index" 
 import Main from "./components/Main/index"
 import Footer from "./components/Footer/index"
+import Coffees from "./components/Coffees"
 //----------------------------------------------------------------
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <section className="main-section">
       <Main/>
       </section>
+      <Coffees />
       <Footer />
     </div>
   )
