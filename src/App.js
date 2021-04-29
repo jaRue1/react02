@@ -20,7 +20,7 @@ function App() {
         isLoggedIn={ isLoggedIn } 
         />
       </header>
-      <section className="main-section">
+      <section className="main-section main-style">
       <Main/>
       </section>
       <Coffees />

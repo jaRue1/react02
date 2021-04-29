@@ -29,10 +29,14 @@
   background-color: lightgrey;
   min-height: 4vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 2em;
+}
+.main-style{
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .App-header {
   background-color: #282c34;

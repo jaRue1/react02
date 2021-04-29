@@ -5,9 +5,11 @@ function Header({ isLoggedIn, setIsLoggedIn }){
   return(
   <>
   <Navbar 
+  // passing in props to Navbar component
   isLoggedIn={ isLoggedIn }
   setIsLoggedIn={ setIsLoggedIn }
   />
+  {/* This is an example of conditional rendering */}
    <h1>Welcome{isLoggedIn ? ' Back' : ' Guest' }</h1>
   </>
    )

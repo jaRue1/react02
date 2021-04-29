@@ -31,7 +31,7 @@ class Coffees extends React.Component {
       .catch()
   }
   render() {
-    console.log("this is the data ", this.state.data)
+    console.log("this is the data ", this.state.data)// logs all the json data into the console
     return (
       <>
         <ul className="allCoffees">
