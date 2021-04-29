@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React , { useState } from 'react'
+import "./App.css"
+//----------------- Importing My Components ----------------------
+import Header from "./components/Header/index" 
+import Main from "./components/Main/index"
+import Footer from "./components/Footer/index"
+//----------------------------------------------------------------
 
 function App() {
+  // const isLoggedIn = false 
+  // Using State (Replaces line above)
+  const [isLoggedIn, setIsLoggedIn] = useState(false) // how to create a state variable
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* Passing isLoggedIn into Header (issa Props) */}
+        <Header 
+        setIsLoggedIn= { setIsLoggedIn }
+        isLoggedIn={ isLoggedIn } 
+        />
       </header>
+      <section className="main-section">
+      <Main/>
+      </section>
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
