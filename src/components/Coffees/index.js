@@ -30,6 +30,7 @@ class Coffees extends React.Component {
       .then((dataReceived) => this.setState({ coffees: dataReceived })) // then set the json data to state
       .catch()
   }
+  // passing in the parameter type
   handleSubmitClick(type){
     this.setState({coffees : null})
     fetch(`https://api.sampleapis.com/coffee/${type}`) 
@@ -48,10 +49,11 @@ class Coffees extends React.Component {
           {/* {this.state.data.map(item => console.log(item))} */}
           {/* Conditional Rendering */}
           <h2>Coffees : </h2>
+          {/* ------------------------------------------------------------------------- */}
           <button onClick ={() => this.handleSubmitClick('hot')}>HOT</button>
           <button onClick ={() => this.handleSubmitClick('iced')}>ICED</button>
-          { !coffees ? <p>Loading......</p> : coffees.map(item => {
-            return <SingleCoffee key={item.id} passedItem={item}/>
+          { !coffees ? <p>Loading......</p> : coffees.map(coffee => {
+            return <SingleCoffee key={coffee.id} passedCoffee={coffee}/>
           })}
         </ul>
       </>
