@@ -7,6 +7,7 @@ import Header from "./components/Header/index"
 import Main from "./components/Main/index"
 import Footer from "./components/Footer/index"
 import Coffees from "./components/Coffees"
+import CoffeeDetails from "./components/Coffees/CoffeeDetails"
 //----------------------------------------------------------------
 
 function App() {
@@ -23,12 +24,22 @@ function App() {
         </header>
         <section className="main-section main-style">
           <Switch>
-            <Route path="/coffee" component>
+
+            {/* Short and efficient way to write routes */}
+            <Route path="/coffee" component ={Coffees}/>
+            <Route path="/" component ={Main}/>
+            <Route path="/coffee/:slug" component={CoffeeDetails}/>
+            {/* ----------------------------------------------------- */}
+            {/* More Vurbose way of writing routes */}
+            {/* <Route path="/coffee" component>
               <Coffees />
-            </Route>
-            <Route path="/" component>
+            </Route> */}
+            {/* ----------------------------------------------------- */}
+            {/* More Vurbose way of writing routes */}
+            {/* <Route path="/" component>
               <Main />
-            </Route>
+            </Route> */}
+            {/* ----------------------------------------------------- */}
           </Switch>
         </section>
         <Footer />

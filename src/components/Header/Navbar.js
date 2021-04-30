@@ -1,5 +1,6 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
+
 // passing props isLoggedIn from Header index.js
 function NavBar({ isLoggedIn, setIsLoggedIn }) {
   return(

@@ -1,5 +1,6 @@
 import React from "react"
 import SingleCoffee from './SingleCoffee'
+
 //Functional Component
 // function Coffees(){
 //   return (
@@ -52,6 +53,7 @@ class Coffees extends React.Component {
           {/* ------------------------------------------------------------------------- */}
           <button onClick ={() => this.handleSubmitClick('hot')}>HOT</button>
           <button onClick ={() => this.handleSubmitClick('iced')}>ICED</button>
+          {/* ------------------------------------------------------------------------- */}
           { !coffees ? <p>Loading......</p> : coffees.map(coffee => {
             return <SingleCoffee key={coffee.id} passedCoffee={coffee}/>
           })}
