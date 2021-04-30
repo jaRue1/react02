@@ -20,7 +20,7 @@ class Coffees extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      coffees: [],
+      coffees: null,
     }
   }
   componentDidMount() {
@@ -28,6 +28,13 @@ class Coffees extends React.Component {
     fetch("https://api.sampleapis.com/coffee/hot") // get the data
       .then((response) => response.json()) // pulls the json out of the response
       .then((dataReceived) => this.setState({ coffees: dataReceived })) // then set the json data to state
+      .catch()
+  }
+  handleSubmitClick(type){
+    this.setState({coffees : null})
+    fetch(`https://api.sampleapis.com/coffee/${type}`) 
+      .then((response) => response.json()) 
+      .then((dataReceived) => this.setState({ coffees: dataReceived }))
       .catch()
   }
   render() {
@@ -39,7 +46,11 @@ class Coffees extends React.Component {
         <ul className="allCoffees">
           {/* logs an individual coffee */}
           {/* {this.state.data.map(item => console.log(item))} */}
-          {coffees.map(item => {
+          {/* Conditional Rendering */}
+          <h2>Coffees : </h2>
+          <button onClick ={() => this.handleSubmitClick('hot')}>HOT</button>
+          <button onClick ={() => this.handleSubmitClick('iced')}>ICED</button>
+          { !coffees ? <p>Loading......</p> : coffees.map(item => {
             return <SingleCoffee key={item.id} passedItem={item}/>
           })}
         </ul>
