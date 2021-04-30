@@ -9,7 +9,7 @@ function SingleCoffee({ passedItem }) {
       <h3>{passedItem.title}</h3>
       <p>{passedItem.description}</p>
       </div>
-      <img src={`https://loremflickr.com/200/200/coffee?lock=${passedItem.id}`} alt=""/>
+      <img src={`https://loremflickr.com/300/300/coffee?lock=${passedItem.id}`} alt=""/>
 
     </li>
   )

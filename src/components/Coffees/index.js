@@ -20,7 +20,7 @@ class Coffees extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      data: [],
+      coffees: [],
     }
   }
   componentDidMount() {
@@ -31,13 +31,15 @@ class Coffees extends React.Component {
       .catch()
   }
   render() {
-    console.log("this is the data ", this.state.data)// logs all the json data into the console
+    console.log("this is the data ", this.state.coffees)// logs all the json data into the console
+    // destructing coffees from state
+    const {coffees} = this.state
     return (
       <>
         <ul className="allCoffees">
           {/* logs an individual coffee */}
           {/* {this.state.data.map(item => console.log(item))} */}
-          {this.state.data.map(item => {
+          {coffees.map(item => {
             return <SingleCoffee key={item.id} passedItem={item}/>
           })}
         </ul>
