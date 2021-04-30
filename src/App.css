@@ -48,6 +48,16 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+nav > a {
+  color :white;
+  padding: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+nav > a:hover, nav > a:active {
+  text-decoration: underline;
+  color: red;
+}
 
 .App-link {
   color: #61dafb;
