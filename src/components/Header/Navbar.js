@@ -1,11 +1,11 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 // passing props isLoggedIn from Header index.js
 function NavBar({ isLoggedIn, setIsLoggedIn }) {
   return(
   <nav>
-    <Link to='/'>Home</Link>
-    <Link to='/coffee'>Coffee</Link>
+    <NavLink exact to='/'>Home</NavLink>
+    <NavLink exact to='/coffee'>Coffee</NavLink>
     <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
       {isLoggedIn ? 'Login' : 'Logout'}
     </button>

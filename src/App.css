@@ -54,7 +54,8 @@ nav > a {
   text-decoration: none;
   font-weight: 600;
 }
-nav > a:hover, nav > a:active {
+/* added custom styling to my nav bar */
+nav > a:hover, nav > a.active {
   text-decoration: underline;
   color: red;
 }
