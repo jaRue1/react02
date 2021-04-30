@@ -27,13 +27,13 @@ class Coffees extends React.Component {
     console.log("This loaded painfully")
     fetch("https://api.sampleapis.com/coffee/hot") // get the data
       .then((response) => response.json()) // pulls the json out of the response
-      .then((dataReceived) => this.setState({ data: dataReceived })) // then set the json data to state
+      .then((dataReceived) => this.setState({ coffees: dataReceived })) // then set the json data to state
       .catch()
   }
   render() {
-    console.log("this is the data ", this.state.coffees)// logs all the json data into the console
     // destructing coffees from state
     const {coffees} = this.state
+    console.log("this is the data ", coffees)// logs all the json data into the console
     return (
       <>
         <ul className="allCoffees">
