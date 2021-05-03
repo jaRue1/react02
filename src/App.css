@@ -34,7 +34,7 @@
   font-size: 2em;
 }
 .main-style{
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
 }
