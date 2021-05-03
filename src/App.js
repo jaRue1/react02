@@ -26,9 +26,9 @@ function App() {
           <Switch>
 
             {/* Short and efficient way to write routes */}
+            <Route path="/coffee/:type/:id" component={CoffeeDetails}/>
             <Route path="/coffee" component ={Coffees}/>
             <Route path="/" component ={Main}/>
-            <Route path="/coffee/:slug" component={CoffeeDetails}/>
             {/* ----------------------------------------------------- */}
             {/* More Vurbose way of writing routes */}
             {/* <Route path="/coffee" component>

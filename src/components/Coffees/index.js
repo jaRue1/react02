@@ -18,7 +18,7 @@ function Coffees(){
     <button onClick ={() => setType('hot')}>HOT</button>
     <button onClick ={() => setType('iced')}>ICED</button>
     {!coffees ? <p>Loading......</p> : coffees.map(coffee => {
-      return <SingleCoffee key={coffee.id} passedCoffee={coffee}/>
+      return <SingleCoffee key={coffee.id} type={type}  passedCoffee={coffee}/>
     })}
     </>
 
