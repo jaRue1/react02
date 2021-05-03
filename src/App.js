@@ -24,22 +24,10 @@ function App() {
         </header>
         <section className="main-section main-style">
           <Switch>
-
             {/* Short and efficient way to write routes */}
             <Route path="/coffee/:type/:id" component={CoffeeDetails}/>
             <Route path="/coffee" component ={Coffees}/>
             <Route path="/" component ={Main}/>
-            {/* ----------------------------------------------------- */}
-            {/* More Vurbose way of writing routes */}
-            {/* <Route path="/coffee" component>
-              <Coffees />
-            </Route> */}
-            {/* ----------------------------------------------------- */}
-            {/* More Vurbose way of writing routes */}
-            {/* <Route path="/" component>
-              <Main />
-            </Route> */}
-            {/* ----------------------------------------------------- */}
           </Switch>
         </section>
         <Footer />
